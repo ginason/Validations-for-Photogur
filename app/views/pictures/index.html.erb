@@ -1,0 +1,17 @@
+<h1>Most recent Pictures</h1>
+
+<ul>
+  <% @most_recent_pictures.each do |picture| %>
+    <li><%= picture.title %></li>
+    <%= image_tag picture.url %>
+    <% end %>
+</ul>
+===================================================
+
+<ul>
+  <% @pictures_created_in_year.each do |picture| %>
+  <h3><%= picture.created_at.year %></h3><br>
+  <li><%= picture.title %></li>
+  <%= image_tag picture.url %>
+  <% end %>
+</ul>
